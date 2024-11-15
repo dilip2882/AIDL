@@ -1,4 +1,4 @@
-package com.dilip.aidlclient
+package com.dilip.aidlserver
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
@@ -11,7 +11,7 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
-import com.dilip.aidlclient.ui.theme.AIDLClientTheme
+import com.dilip.aidlserver.ui.theme.AIDLClientTheme
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
