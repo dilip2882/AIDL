@@ -5,14 +5,7 @@ import android.content.Intent
 import android.os.IBinder
 
 class MyService : Service() {
-
-    private val serviceImp: SimpServiceImp = SimpServiceImp()
-
-    override fun onBind(intent: Intent): IBinder {
-        TODO("Return the communication channel to the service.")
-    }
-
-    class SimpServiceImp : ISimpl.Stub() {
+    private val binder = object : ISimpl.Stub() {
         override fun add(a: Int, b: Int): Int {
             return a + b
         }
@@ -21,5 +14,12 @@ class MyService : Service() {
             return a - b
         }
 
+        override fun mul(a: Int, b: Int): Int {
+            return a * b
+        }
+    }
+
+    override fun onBind(intent: Intent): IBinder {
+        return binder
     }
 }

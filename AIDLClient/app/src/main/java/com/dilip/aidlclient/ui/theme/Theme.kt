@@ -1,4 +1,4 @@
-package com.dilip.aidlserver.ui.theme
+package com.dilip.aidlclient.ui.theme
 
 import android.app.Activity
 import android.os.Build

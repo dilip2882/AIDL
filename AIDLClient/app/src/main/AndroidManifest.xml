@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <uses-permission android:name="com.dilip.aidlserver.permission.BIND" />
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -12,8 +14,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AIDLClient"
         tools:targetApi="31">
+
         <activity
-            android:name="com.dilip.aidlserver.MainActivity"
+            android:name="com.dilip.aidlclient.MainActivity"
             android:exported="true"
             android:label="@string/app_name"
             android:theme="@style/Theme.AIDLClient">
