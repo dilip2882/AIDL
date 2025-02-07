@@ -6,40 +6,40 @@ In this guide, we'll walk through the process of using **AIDL (Android Interface
 
 ## Table of Contents
 
-#### [1. What is AIDL?](#1-what-is-aidl)
+### [1. What is AIDL?](#1-what-is-aidl)
   - [Why is AIDL Needed?](#why-is-aidl-needed)
 
-#### [2. Creating the AIDL Interface](#2-creating-the-aidl-interface)
+### [2. Creating the AIDL Interface](#2-creating-the-aidl-interface)
   - [Create the AIDL File](#create-the-aidl-file)
   - [Generated Code from AIDL](#generated-code-from-aidl)
 
-#### [3. Setting Up the Server Application](#3-setting-up-the-server-application)
+### [3. Setting Up the Server Application](#3-setting-up-the-server-application)
   - [Service Implementation](#service-implementation)
   - [Register the Service in the Manifest](#register-the-service-in-the-manifest)
 
-#### [4. Setting Up the Client Application](#4-setting-up-the-client-application)
+### [4. Setting Up the Client Application](#4-setting-up-the-client-application)
   - [Client App Implementation](#client-app-implementation)
 
-#### [5. Binding the Service](#5-binding-the-service)
+### [5. Binding the Service](#5-binding-the-service)
 
-#### [6. Handling Permissions](#6-handling-permissions)
+### [6. Handling Permissions](#6-handling-permissions)
   - [Server App Permissions](#server-app-permissions)
   - [Client App Permissions](#client-app-permissions)
 
-#### [7. Common Issues](#7-common-issues)
+### [7. Common Issues](#7-common-issues)
 
-#### [8. Advanced Topics](#8-advanced-topics)
+### [8. Advanced Topics](#8-advanced-topics)
   - [Handling Arrays in AIDL](#handling-arrays-in-aidl)
   - [Asynchronous Services](#asynchronous-services)
 
-#### [9. Understanding AIDL and Binder Internals](#9-understanding-aidl-and-binder-internals)
+### [9. Understanding AIDL and Binder Internals](#9-understanding-aidl-and-binder-internals)
   - [How Binder IPC Works](#how-binder-ipc-works)
   - [AIDL Generated Code Deep Dive](#aidl-generated-code-deep-dive)
   - [Binder Death Notification](#binder-death-notification)
   - [Performance Considerations](#performance-considerations)
   - [Security Mechanisms](#security-mechanisms)
 
-#### [10. Understanding the Calculator Example Flow](#10-understanding-the-calculator-example-flow)
+### [10. Understanding the Calculator Example Flow](#10-understanding-the-calculator-example-flow)
   - [Architecture Overview](#architecture-overview)
   - [Detailed Communication Flow](#detailed-communication-flow)
   - [Component Responsibilities](#component-responsibilities)
