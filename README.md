@@ -2,40 +2,48 @@
 
 In this guide, we'll walk through the process of using **AIDL (Android Interface Definition Language)** to enable **Inter-Process Communication (IPC)** between a client and a server in Android applications. AIDL facilitates communication between components running in different processes, even across different apps, using **Binder IPC**. We'll cover everything from defining an AIDL interface to setting up both the client and server, handling permissions, and addressing common issues you might encounter along the way. By the end, you'll have a solid understanding of how to leverage AIDL in your Android projects.
 
+---
+
 ## Table of Contents
 
-- [AIDL](#aidl)
-  - [Table of Contents](#table-of-contents)
-    - [1. What is AIDL?](#1-what-is-aidl)
-      - [Why is AIDL Needed?](#why-is-aidl-needed)
-    - [2. Creating the AIDL Interface](#2-creating-the-aidl-interface)
-      - [Create the AIDL File](#create-the-aidl-file)
-      - [Generated Code from AIDL](#generated-code-from-aidl)
-    - [3. Setting Up the Server Application](#3-setting-up-the-server-application)
-      - [Service Implementation](#service-implementation)
-      - [Register the Service in the Manifest](#register-the-service-in-the-manifest)
-    - [4. Setting Up the Client Application](#4-setting-up-the-client-application)
-      - [Client App Implementation](#client-app-implementation)
-    - [5. Binding the Service](#5-binding-the-service)
-    - [6. Handling Permissions](#6-handling-permissions)
-      - [Server App Permissions](#server-app-permissions)
-      - [Client App Permissions](#client-app-permissions)
-    - [7. Common Issues](#7-common-issues)
-    - [8. Advanced Topics](#8-advanced-topics)
-      - [Handling Arrays in AIDL](#handling-arrays-in-aidl)
-      - [Asynchronous Services](#asynchronous-services)
-    - [9. Understanding AIDL and Binder Internals](#9-understanding-aidl-and-binder-internals)
-      - [How Binder IPC Works](#how-binder-ipc-works)
-      - [AIDL Generated Code Deep Dive](#aidl-generated-code-deep-dive)
-      - [Binder Death Notification](#binder-death-notification)
-      - [Performance Considerations](#performance-considerations)
-      - [Security Mechanisms](#security-mechanisms)
-    - [10. Understanding the Calculator Example Flow](#10-understanding-the-calculator-example-flow)
-      - [Architecture Overview](#architecture-overview)
-      - [Detailed Communication Flow](#detailed-communication-flow)
-      - [Component Responsibilities](#component-responsibilities)
-      - [Data Flow Example: Addition Operation](#data-flow-example-addition-operation)
-    - [11. Conclusion](#11-conclusion)
+#### [1. What is AIDL?](#1-what-is-aidl)
+  - [Why is AIDL Needed?](#why-is-aidl-needed)
+
+#### [2. Creating the AIDL Interface](#2-creating-the-aidl-interface)
+  - [Create the AIDL File](#create-the-aidl-file)
+  - [Generated Code from AIDL](#generated-code-from-aidl)
+
+#### [3. Setting Up the Server Application](#3-setting-up-the-server-application)
+  - [Service Implementation](#service-implementation)
+  - [Register the Service in the Manifest](#register-the-service-in-the-manifest)
+
+#### [4. Setting Up the Client Application](#4-setting-up-the-client-application)
+  - [Client App Implementation](#client-app-implementation)
+
+#### [5. Binding the Service](#5-binding-the-service)
+
+#### [6. Handling Permissions](#6-handling-permissions)
+  - [Server App Permissions](#server-app-permissions)
+  - [Client App Permissions](#client-app-permissions)
+
+#### [7. Common Issues](#7-common-issues)
+
+#### [8. Advanced Topics](#8-advanced-topics)
+  - [Handling Arrays in AIDL](#handling-arrays-in-aidl)
+  - [Asynchronous Services](#asynchronous-services)
+
+#### [9. Understanding AIDL and Binder Internals](#9-understanding-aidl-and-binder-internals)
+  - [How Binder IPC Works](#how-binder-ipc-works)
+  - [AIDL Generated Code Deep Dive](#aidl-generated-code-deep-dive)
+  - [Binder Death Notification](#binder-death-notification)
+  - [Performance Considerations](#performance-considerations)
+  - [Security Mechanisms](#security-mechanisms)
+
+#### [10. Understanding the Calculator Example Flow](#10-understanding-the-calculator-example-flow)
+  - [Architecture Overview](#architecture-overview)
+  - [Detailed Communication Flow](#detailed-communication-flow)
+  - [Component Responsibilities](#component-responsibilities)
+  - [Data Flow Example: Addition Operation](#data-flow-example-addition-operation)
 
 ---
 
@@ -677,8 +685,3 @@ The process shows how:
 
 ---
 
-### 11\. Conclusion
-
-In this guide, we've demonstrated how to create both a client and server application using AIDL for inter-process communication. We've covered how to define an AIDL interface, implement the service, bind to it from the client, and handle necessary permissions. Additionally, we've addressed common issues developers face when using AIDL.
-
-AIDL is a powerful tool in Android development, enabling seamless communication between processes. By automating the generation of IPC code, AIDL simplifies the development process, allowing developers to focus on building robust, cross-process communication solutions. Mastering AIDL is essential for any Android developer dealing with complex applications that require inter-process communication.
